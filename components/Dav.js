@@ -7,7 +7,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export function Dav(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/4D JORGE PIERNAS.gltf");
+  const { nodes, materials, animations } = useGLTF("/6D JORGE PIERNAS.gltf");
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -69,11 +69,7 @@ export function Dav(props) {
           rotation={[Math.PI / 2, 0, -Math.PI / 2]}
           scale={0.62}
         />
-        <group
-          name="TQ_ARD-node"
-          position={[0, 0.02, -0.01]}
-          rotation={[Math.PI / 2, 0, 0]}
-        >
+        <group name="TQ_ARD-node">
           <mesh
             name="TQ_ARD-geom001"
             castShadow
@@ -124,4 +120,4 @@ export function Dav(props) {
   );
 }
 
-useGLTF.preload("/4D JORGE PIERNAS.gltf");
+useGLTF.preload("/6D JORGE PIERNAS.gltf");
